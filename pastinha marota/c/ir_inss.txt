@@ -1,0 +1,30 @@
+
+// Online C Compiler - Build, Compile and Run your C programs online in your favorite browser
+
+#include<stdio.h>
+
+const double inss = 0.915;
+const double ir = 0.734;
+const double dinss = 0.085;
+const double dir = 0.266;
+
+
+int main()
+{
+    double salario, descir, salarioliq, salarioin, valorir, valorin; 
+
+    printf("qual seu salario bruto?\n");
+    scanf("%lf", &salario);
+    
+    salarioin=salario*inss;
+    salarioliq=salarioin*ir;
+    valorin=salario*dinss;
+    valorir=salarioin*dir;
+    
+    printf("temos a seguinte situação...\n");
+    printf("seu salario bruto: R$%.2lf\no desconto de inss eh de: R$%.2lf\no desconto de imposto de renda eh: R$%.2lf\n", salario, valorin, valorir);
+    printf("com todos os descontos, você receberá: R$%.2lf", salarioliq);
+    
+    
+    return 0;
+}
